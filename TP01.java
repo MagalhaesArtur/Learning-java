@@ -19,7 +19,7 @@ public class TP01 {
         // else
         // System.out.println(texto2);
 
-        String combinatedData = arquivo.CombineData(arq1, arq2);
+        String combinatedData = arquivo.CombineData(arq1, arq2, false);
         System.out.println(combinatedData);
 
     }

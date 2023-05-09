@@ -54,13 +54,13 @@ public class Arquivos {
         }
     }
 
-    public String CombineData(String Caminho1, String Caminho2) {
-        String dataArch1 = this.ReadData(Caminho1, false);
-        String dataArch2 = this.ReadData(Caminho2, false);
+    public String CombineData(String Caminho1, String Caminho2, Boolean repeatData) {
+        String dataArch1 = this.ReadData(Caminho1, repeatData);
+        String dataArch2 = this.ReadData(Caminho2, repeatData);
         String combinetedData = dataArch1 + "" + dataArch2;
 
         Boolean isWritted = this.WriteData("dadosCombinados.txt", combinetedData);
-        combinetedData = this.ReadData("dadosCombinados.txt", false);
+        combinetedData = this.ReadData("dadosCombinados.txt", repeatData);
         Boolean isWritted2 = this.WriteData("dadosCombinados.txt", combinetedData);
 
         if (isWritted && isWritted2) {
